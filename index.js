@@ -1,5 +1,6 @@
 // Require the electron module
 const electron = require("electron");
+const path = require('path');
 
 // Destructure off the 'app' process & 'BrowserWindow' from electron
 const { app, BrowserWindow, Tray } = electron;
@@ -13,11 +14,11 @@ app.on("ready", () => {
   });
 
   //  Add a tray icon!
-  const iconPath = require('path').join(__dirname, './icons/iconTemplate@2x.png');
-  const tray = new Tray(iconPath);
+  // const iconPath = path.join(__dirname, './icons/iconTemplate@2x.png');
+  // const tray = new Tray(iconPath);
 
   // Render the index.html file
-  return mainWindow.loadFile("./index.html");
+  return mainWindow.loadFile(path.join(__dirname, "./index.html"));
 
   // Render an integrated web page
   // return mainWindow.loadURL("https://www.github.com");
