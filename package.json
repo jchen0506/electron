@@ -1,14 +1,10 @@
 {
   "name": "electron-demo",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "electron": "^9.0.5"
   }
